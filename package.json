@@ -1,7 +1,7 @@
 {
   "name": "react-inbox-template",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://praveenkumar2pk.github.io/react-inbox-template/",
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
     "@babel/core": "7.9.0",
@@ -66,7 +66,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -137,5 +138,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
