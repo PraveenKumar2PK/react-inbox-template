@@ -1,8 +1,9 @@
 import React, { useState, useCallback, useRef } from 'react';
-import { Table, Input, InputNumber, Popconfirm, Form, Button, Space} from 'antd';
+import { Table, Input, InputNumber, Popconfirm, Form, Button, Space, Drawer, Typography} from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import modalData from '../modelData.json';
 const originData = [];
+const {Title} = Typography;
 
 modalData.data.forEach((data, index) =>{
     originData.push({
@@ -55,19 +56,26 @@ const EditableTable = () => {
     searchText: '',
     searchedColumn: ''
   });
+  const [isEditDisplay, setIsEditDisplay] = useState(false);
   const searchInput = useRef(null);
+  const [selectedName, setSelectedName] = useState('');
 
   const isEditing = (record) => record.key === editingKey;
 
   const edit = (record) => {
-    form.setFieldsValue({
-      name: '',
-      age: '',
-      address: '',
-      ...record,
-    });
-    setEditingKey(record.key);
+    // form.setFieldsValue({
+    //   name: '',
+    //   age: '',
+    //   address: '',
+    //   ...record,
+    // });
+    // setEditingKey(record.key);
+    setSelectedName(record.name);
+    setIsEditDisplay(true);
   };
+  const onClose = useCallback(() => {
+    setIsEditDisplay(false);
+  },[]);
 
   const cancel = () => {
     setEditingKey('');
@@ -242,25 +250,49 @@ const EditableTable = () => {
     };
   });
   return (
-    <Form form={form} component={false}>
-      <Table
-        components={{
-          body: {
-            cell: EditableCell,
-          },
-        }}
-        bordered
-        dataSource={data}
-        columns={mergedColumns}
-        rowClassName="editable-row"
-        pagination={{
-          onChange: cancel,
-        }}
-        scroll={{ x: 1000, y: 450 }}
-        loading={loading}
-        onChange={handleTableChange}
-      />
-    </Form>
+    <div>
+      <Form form={form} component={false}>
+        <Table
+          components={{
+            body: {
+              cell: EditableCell,
+            },
+          }}
+          bordered
+          dataSource={data}
+          columns={mergedColumns}
+          rowClassName="editable-row"
+          pagination={{
+            onChange: cancel,
+          }}
+          scroll={{ x: 1000, y: 450 }}
+          loading={loading}
+          onChange={handleTableChange}
+        />
+      </Form>
+      <Drawer
+          title={<Title level={5}>Edit</Title>}
+          placement='right'
+          closable={false}
+          onClose={onClose}
+          visible={isEditDisplay}
+          key='right'
+          width={520}
+        >
+          <div>
+            <Title level={5}>Name:</Title>
+            <Input value={selectedName} />
+          </div>
+          <div style={{ paddingTop: 16}}>
+            <Title level={5}>Phone Number:</Title>
+            <Input />
+          </div>
+          <div style={{display: 'flex', justifyContent: 'space-around', paddingTop: 24}}>
+            <Button type="primary">Save</Button>
+            <Button>Cancel</Button>
+          </div>
+        </Drawer>
+    </div>
   );
 };
 
