@@ -1,9 +1,10 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Drawer, Typography, Checkbox } from 'antd';
+import { Button, Drawer, Typography, Select } from 'antd';
 import EditableTable from './EditableTable';
 import { MenuOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
+const { Option } = Select;
 const PortalPage = () => {
   const [isFilterDisplay, setFilterDisplay] = useState(false);
   const onClose = useCallback(() => {
@@ -34,39 +35,25 @@ const PortalPage = () => {
           >
             <div>
               <Title level={4}>State</Title>
-              <div style={{display: 'flex', flexDirection: 'column'}}>
-                <div>
-                  <Checkbox>TamilNadu</Checkbox>
-                </div>
-                <div>
-                  <Checkbox>Kerala</Checkbox>
-                </div>
-              </div>
+              <Select defaultValue="tamilnadu" style={{ width: 120 }}>
+                <Option value="tamilnadu">TamilNadu</Option>
+                <Option value="kerala">Kerala</Option>
+              </Select>
             </div>
             <div style={{paddingTop: 16}}>
               <Title level={4}>District</Title>
-              <div style={{display: 'flex', flexDirection: 'column'}}>
-                <div>
-                  <Checkbox>Chennai</Checkbox>
-                </div>
-                <div>
-                  <Checkbox>Madurai</Checkbox>
-                </div>
-                <div>
-                  <Checkbox>Salem</Checkbox>
-                </div>
-              </div>
+              <Select defaultValue="chennai" style={{ width: 120 }}>
+                <Option value="chennai">Chennai</Option>
+                <Option value="madurai">Madurai</Option>
+                <Option value="salem">Salem</Option>
+              </Select>
             </div>
             <div style={{paddingTop: 16}}>
               <Title level={4}>Booth</Title>
-              <div style={{display: 'flex', flexDirection: 'column'}}>
-                <div>
-                  <Checkbox>Booth 1</Checkbox>
-                </div>
-                <div>
-                  <Checkbox>Booth 2</Checkbox>
-                </div>
-              </div>
+              <Select defaultValue="booth1" style={{ width: 120 }}>
+                <Option value="booth1">Booth 1</Option>
+                <Option value="booth2">Booth 2</Option>
+              </Select>
             </div>
           </Drawer>
       </div>
