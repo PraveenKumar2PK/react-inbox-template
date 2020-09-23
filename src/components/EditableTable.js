@@ -288,8 +288,8 @@ const EditableTable = () => {
             <Input />
           </div>
           <div style={{display: 'flex', justifyContent: 'space-around', paddingTop: 24}}>
-            <Button type="primary">Save</Button>
-            <Button>Cancel</Button>
+            <Button type="primary" onClick={onClose}>Save</Button>
+            <Button onClick={onClose}>Cancel</Button>
           </div>
         </Drawer>
     </div>
