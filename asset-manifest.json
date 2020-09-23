@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-inbox-template/static/css/main.2470c274.chunk.css",
-    "main.js": "/react-inbox-template/static/js/main.88d7faba.chunk.js",
-    "main.js.map": "/react-inbox-template/static/js/main.88d7faba.chunk.js.map",
+    "main.js": "/react-inbox-template/static/js/main.294d0461.chunk.js",
+    "main.js.map": "/react-inbox-template/static/js/main.294d0461.chunk.js.map",
     "runtime-main.js": "/react-inbox-template/static/js/runtime-main.fb2d32fc.js",
     "runtime-main.js.map": "/react-inbox-template/static/js/runtime-main.fb2d32fc.js.map",
     "static/css/2.cd846464.chunk.css": "/react-inbox-template/static/css/2.cd846464.chunk.css",
     "static/js/2.4b44f3d1.chunk.js": "/react-inbox-template/static/js/2.4b44f3d1.chunk.js",
     "static/js/2.4b44f3d1.chunk.js.map": "/react-inbox-template/static/js/2.4b44f3d1.chunk.js.map",
     "index.html": "/react-inbox-template/index.html",
-    "precache-manifest.1e68cf92bda8af003a544b8e04b38fea.js": "/react-inbox-template/precache-manifest.1e68cf92bda8af003a544b8e04b38fea.js",
+    "precache-manifest.11a37d412a1f4a5af0545ebcb6d6dbd2.js": "/react-inbox-template/precache-manifest.11a37d412a1f4a5af0545ebcb6d6dbd2.js",
     "service-worker.js": "/react-inbox-template/service-worker.js",
     "static/css/2.cd846464.chunk.css.map": "/react-inbox-template/static/css/2.cd846464.chunk.css.map",
     "static/css/main.2470c274.chunk.css.map": "/react-inbox-template/static/css/main.2470c274.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.cd846464.chunk.css",
     "static/js/2.4b44f3d1.chunk.js",
     "static/css/main.2470c274.chunk.css",
-    "static/js/main.88d7faba.chunk.js"
+    "static/js/main.294d0461.chunk.js"
   ]
 }
