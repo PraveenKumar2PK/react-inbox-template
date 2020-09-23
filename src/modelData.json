@@ -1,0 +1,70 @@
+{
+    "data" : [
+        {
+            "name": "John",
+            "age": 32,
+            "address": "Vallur kottam",
+            "gender": "Male"
+        },
+        {
+            "name": "Witson",
+            "age": 40,
+            "address": "Anna nagar",
+            "gender": "Female"
+        },
+        {
+            "name": "Mosh",
+            "age": 43,
+            "address": "RK nagar",
+            "gender": "Female"
+        },
+        {
+            "name": "Vivek",
+            "age": 24,
+            "address": "Raji pattai",
+            "gender": "Male"
+        },
+        {
+            "name": "Varun",
+            "age": 40,
+            "address": "Ashok nagar",
+            "gender": "Male"
+        },
+        {
+            "name": "Vasanth",
+            "age": 41,
+            "address": "Raja nagar",
+            "gender": "Male"
+        },
+        {
+            "name": "Arun",
+            "age": 48,
+            "address": "Ashok nagar",
+            "gender": "Male"
+        },
+        {
+            "name": "Harini",
+            "age": 36,
+            "address": "Madhavaram",
+            "gender": "Female"
+        },
+        {
+            "name": "Ravi",
+            "age": 20,
+            "address": "Thoraipakam",
+            "gender": "Male"
+        },
+        {
+            "name": "Suresh",
+            "age": 41,
+            "address": "Kankayam",
+            "gender": "Male"
+        },
+        {
+            "name": "Rohit",
+            "age": 40,
+            "address": "Varatharaj nagar",
+            "gender": "Male"
+        }
+    ]
+}
